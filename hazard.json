@@ -1,0 +1,50 @@
+{
+    "format":  "avsim-studio/1",
+    "params":  {
+                   "cutT0":  6.5,
+                   "cutDur":  2.4,
+                   "cutV":  15,
+                   "pedT0":  11,
+                   "pedV":  1.45,
+                   "busGo":  17,
+                   "cutDs":  -4,
+                   "tgT":  0.9,
+                   "mu":  0.8,
+                   "cutGap":  12,
+                   "cutBrake":  0,
+                   "pedGap":  4.5,
+                   "pedLook":  1,
+                   "civil":  true
+               },
+    "policy":  {
+
+               },
+    "ego":  "planner",
+    "hazards":  [
+                    {
+                        "x":  145.0,
+                        "side":  "S",
+                        "v":  2.2,
+                        "t0":  0.0,
+                        "trig":  30.0,
+                        "type":  "ped"
+                    }
+                ],
+    "space":  {
+                  "h0_x":  [
+                               140.0,
+                               160.0
+                           ],
+                  "h0_v":  [
+                               1.8,
+                               2.4
+                           ],
+                  "h0_trig":  [
+                                  26.0,
+                                  36.0
+                              ]
+              },
+    "world":  "town",
+    "exposure":  1.0,
+    "why":  "Controlled stress-test protocol, not a measured public-road exposure: every simulated trip includes exactly one H0 pedestrian outside the marked crosswalk, hence exposure = 1/1 = 1. Keep the surrounding traffic drawn from town B (world=town). The marked crosswalk is x=122 m in avsim/core.py; H0 is 18-38 m beyond it (x=140-160 m), so the experiment tests whether crossing anticipation generalizes beyond the hard-coded crosswalk. The ego lane centre is z=1.75 m and the south pavement is z=9.2 m: the pedestrian must cover 7.45 m. At the deliberately brisk but sub-2.5 m/s test speeds 1.8-2.4 m/s, that takes 3.10-4.14 s. A trigger gap of 26-36 m spans ego arrival times 2.17-4.50 s at 8-12 m/s, overlapping that crossing window. These are declared engineering test envelopes, sampled uniformly, not fitted human behaviour or occurrence rates. The exact scene x=145, v=2.2, trig=30 is a feasible avoidable collision found in a separate 36-scene design check; final probabilities come only from the fixed 1500-draw mine sweep. Rates multiplied by exposure describe this every-trip hazard protocol only and must not be claimed as natural town or real-road frequencies. A deployment estimate requires measured occurrences per trip for the intended route."
+}

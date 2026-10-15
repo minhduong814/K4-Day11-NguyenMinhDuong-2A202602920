@@ -1,0 +1,35 @@
+{
+ "reactive_events": [],
+ "replay_events": [
+  {
+   "t": 14.8,
+   "f": 296,
+   "a": "ego",
+   "b": "TG",
+   "kind": "contact",
+   "x": 107.14154052734375,
+   "z": 1.75,
+   "fake": true
+  }
+ ],
+ "progress_default": 188.95529174804688,
+ "seconds": 8.558051586151123,
+ "_run": {
+  "mssv": "202602920",
+  "town": "B",
+  "quick": false,
+  "step": "all",
+  "salted": false,
+  "budgets": {
+   "replay_n": 400,
+   "mc_n": 3000,
+   "iters": 8,
+   "per_iter": 300,
+   "final_n": 600,
+   "seeds": 3,
+   "fix_n": 400,
+   "progress_n": 256,
+   "mine_n": 1500
+  }
+ }
+}

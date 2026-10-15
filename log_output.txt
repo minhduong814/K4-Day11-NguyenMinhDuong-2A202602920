@@ -1,0 +1,139 @@
+PS D:\VinAI\Labs\K4-Day11-NguyenMinhDuong-2A202602920> python run_all.py all
+  -> evidence/meta.json
+  (no hazard.json yet: step G skipped; run `python run_all.py mine hazard.json` once you have it)
+[world]
+  reactive: 0 collisions; replay: [('ego', 'TG', 14.8)]
+  -> evidence/world.json
+  (9 s)
+[replay]
+  replay: {'crashes': 116, 'contact': {'rear': 104, 'side': 12}}  reactive: {'crashes': 2, 'contact': {'side': 2}}  both: 1
+  -> evidence/replay.json
+  (44 s)
+[mc]
+  3 crashes in 3000: p = 1.00e-03, 95% Wilson [3.40e-04, 2.94e-03], modes {'bus_bypass': 3}
+  -> evidence/mc.json
+  (65 s)
+[hunt]
+    bus_bypass  round 1: elite level   -6.17  crashes   0  infeasible 3
+    bus_bypass  round 2: elite level   -2.44  crashes   0  infeasible 1
+    bus_bypass  round 3: elite level   -1.55  crashes   5  infeasible 1
+    bus_bypass  round 4: elite level   -0.00  crashes  15  infeasible 0
+    bus_bypass  round 5: elite level   -0.00  crashes  22  infeasible 0
+    bus_bypass  round 6: elite level    0.00  crashes  31  infeasible 0
+    bus_bypass  round 7: elite level    0.00  crashes  48  infeasible 0
+    bus_bypass  round 8: elite level    0.00  crashes  45  infeasible 0
+  hunt bus_bypass: found {'bus_bypass': 165, 'crosswalk_block': 1}  infeasible skipped 5
+    cut_in      round 1: elite level   -7.05  crashes   0  infeasible 1
+    cut_in      round 2: elite level   -5.49  crashes   2  infeasible 1
+    cut_in      round 3: elite level   -3.61  crashes   2  infeasible 1
+    cut_in      round 4: elite level   -3.49  crashes   1  infeasible 0
+    cut_in      round 5: elite level   -3.43  crashes   3  infeasible 0
+    cut_in      round 6: elite level   -3.41  crashes   6  infeasible 0
+    cut_in      round 7: elite level   -3.35  crashes   8  infeasible 0
+    cut_in      round 8: elite level   -3.37  crashes  11  infeasible 0
+  hunt cut_in    : found {'bus_bypass': 33}  infeasible skipped 3
+    crosswalk_block round 1: elite level   -5.03  crashes   0  infeasible 1
+    crosswalk_block round 2: elite level   -5.00  crashes   1  infeasible 2
+    crosswalk_block round 3: elite level   -4.99  crashes   2  infeasible 1
+    crosswalk_block round 4: elite level   -4.97  crashes   3  infeasible 3
+    crosswalk_block round 5: elite level   -3.13  crashes   6  infeasible 1
+    crosswalk_block round 6: elite level   -1.09  crashes  16  infeasible 0
+    crosswalk_block round 7: elite level    0.00  crashes  41  infeasible 0
+    crosswalk_block round 8: elite level    0.00  crashes  66  infeasible 2
+  hunt crosswalk_block: found {'bus_bypass': 12, 'crosswalk_block': 123}  infeasible skipped 10
+    rear_ended  round 1: elite level   -1.93  crashes   2  infeasible 1
+    rear_ended  round 2: elite level   -1.79  crashes   2  infeasible 0
+    rear_ended  round 3: elite level   -1.72  crashes   1  infeasible 0
+    rear_ended  round 4: elite level   -1.57  crashes   0  infeasible 0
+    rear_ended  round 5: elite level   -1.49  crashes   0  infeasible 2
+    rear_ended  round 6: elite level   -1.29  crashes   2  infeasible 0
+    rear_ended  round 7: elite level   -1.21  crashes   3  infeasible 0
+    rear_ended  round 8: elite level   -1.20  crashes   6  infeasible 0
+  hunt rear_ended: found {'bus_bypass': 6, 'crosswalk_block': 10}  infeasible skipped 3
+  -> evidence/hunt.json
+  (240 s)
+[estimate]
+  seed 0: total 5.61e-04 [0.00e+00, 2.61e-03]  bus_bypass 5.6e-04 (hits 27, ess 149)  cut_in 0.0e+00 (hits 0, ess 128)  crosswalk_block 2.0e-06 (hits 100, ess 112)  rear_ended 0.0e+00 (hits 0, ess 122)
+  seed 1: total 5.72e-04 [0.00e+00, 2.45e-03]  bus_bypass 5.1e-04 (hits 27, ess 149)  cut_in 0.0e+00 (hits 0, ess 119)  crosswalk_block 5.8e-05 (hits 111, ess 130)  rear_ended 0.0e+00 (hits 0, ess 114)
+  seed 2: total 8.26e-04 [1.76e-04, 2.75e-03]  bus_bypass 7.9e-04 (hits 35, ess 136)  cut_in 0.0e+00 (hits 0, ess 124)  crosswalk_block 3.3e-05 (hits 103, ess 121)  rear_ended 0.0e+00 (hits 0, ess 120)
+  -> evidence/estimate.json
+  (177 s)
+[fix]
+  [ 1] {'cautionV': 5.0}  TRAIN fail 6.09e-05 (hi 1.38e-04)  progress 171.6 m
+  [ 2] {'cautionV': 6.5}  TRAIN fail 7.06e-04 (hi 1.14e-03)  progress 195.9 m
+  [ 3] {'cautionV': 6.0}  TRAIN fail 2.95e-04 (hi 5.65e-04)  progress 188.0 m
+  [ 4] {'cautionV': 9.0}  TRAIN fail 1.41e-03 (hi 2.70e-03)  progress 222.9 m
+  [ 5] {'cautionV': 8.5}  TRAIN fail 8.99e-04 (hi 1.84e-03)  progress 219.4 m
+  [ 6] {'cutinLat': 2.6}  TRAIN fail 7.24e-05 (hi 1.47e-04)  progress 210.1 m
+  [ 7] {'cutinLat': 3.0}  TRAIN fail 4.91e-06 (hi 1.01e-05)  progress 210.1 m  unseen: bus_bypass
+  [ 8] {'cutinLat': 3.3}  TRAIN fail 4.91e-06 (hi 1.01e-05)  progress 210.1 m  unseen: bus_bypass
+  [ 9] {'T': 2.0}  TRAIN fail 7.32e-04 (hi 1.16e-03)  progress 200.6 m
+  [10] {'cutinLat': 3.0, 'cautionV': 6.5}  TRAIN fail 3.85e-06 (hi 7.80e-06)  progress 195.4 m  unseen: bus_bypass
+  [11] {'cutinLat': 3.0, 'cautionV': 7.0}  TRAIN fail 5.87e-06 (hi 1.15e-05)  progress 203.4 m  unseen: bus_bypass
+  [12] {'cutinLat': 2.6, 'cautionV': 7.0, 'pedBuffer': 3.5}  TRAIN fail 1.94e-04 (hi 4.43e-04)  progress 203.4 m
+  re-hunting under the chosen policy and the baseline for the TEST estimate ...
+    bus_bypass  round 1: elite level   -5.58  crashes   0  infeasible 1
+    bus_bypass  round 2: elite level   -2.35  crashes   0  infeasible 0
+    bus_bypass  round 3: elite level   -2.23  crashes   0  infeasible 2
+    bus_bypass  round 4: elite level   -2.17  crashes   0  infeasible 1
+    bus_bypass  round 5: elite level   -1.33  crashes   0  infeasible 0
+    bus_bypass  round 6: elite level   -0.00  crashes   0  infeasible 0
+    bus_bypass  round 7: elite level   -0.00  crashes   0  infeasible 0
+    bus_bypass  round 8: elite level   -0.00  crashes   0  infeasible 0
+    crosswalk_block round 1: elite level   -5.08  crashes   0  infeasible 2
+    crosswalk_block round 2: elite level   -5.01  crashes   0  infeasible 3
+    crosswalk_block round 3: elite level   -4.99  crashes   0  infeasible 0
+    crosswalk_block round 4: elite level   -4.99  crashes   1  infeasible 5
+    crosswalk_block round 5: elite level   -4.99  crashes   0  infeasible 2
+    crosswalk_block round 6: elite level   -4.85  crashes   0  infeasible 2
+    crosswalk_block round 7: elite level   -2.96  crashes   2  infeasible 1
+    crosswalk_block round 8: elite level   -1.46  crashes   5  infeasible 1
+    bus_bypass  round 1: elite level   -5.27  crashes   0  infeasible 1
+    bus_bypass  round 2: elite level   -2.28  crashes   1  infeasible 0
+    bus_bypass  round 3: elite level   -1.70  crashes   1  infeasible 0
+    bus_bypass  round 4: elite level   -0.00  crashes  10  infeasible 0
+    bus_bypass  round 5: elite level   -0.00  crashes  16  infeasible 0
+    bus_bypass  round 6: elite level   -0.00  crashes  19  infeasible 0
+    bus_bypass  round 7: elite level   -0.00  crashes  26  infeasible 0
+    bus_bypass  round 8: elite level   -0.00  crashes  28  infeasible 0
+    crosswalk_block round 1: elite level   -5.10  crashes   2  infeasible 2
+    crosswalk_block round 2: elite level   -5.01  crashes   2  infeasible 2
+    crosswalk_block round 3: elite level   -4.99  crashes   0  infeasible 0
+    crosswalk_block round 4: elite level   -4.99  crashes   0  infeasible 6
+    crosswalk_block round 5: elite level   -4.99  crashes   0  infeasible 1
+    crosswalk_block round 6: elite level   -4.94  crashes   0  infeasible 2
+    crosswalk_block round 7: elite level   -3.53  crashes   2  infeasible 1
+    crosswalk_block round 8: elite level   -2.21  crashes   7  infeasible 2
+  chosen {'cutinLat': 3.0} (picked on TRAIN: fail 4.91e-06). Report these, from TEST:
+    chosen   TEST fail 1.08e-04  fail_hi_seen 3.15e-04  fail_hi (valid) 3.91e-02  unseen ['bus_bypass']  progress 213.4 m
+    baseline TEST fail 5.43e-04  fail_hi_seen 8.81e-04  fail_hi (valid) 2.16e-03  unseen []  progress 213.3 m
+  -> evidence/fix.json
+  (717 s)
+[export]
+  11 runs, 6000 cloud points -> evidence/viewer.json (open the viewer, chapter 9)
+  (0 s)
+PS D:\VinAI\Labs\K4-Day11-NguyenMinhDuong-2A202602920> 
+--- Supplemental full-budget run: step G and refreshed export ---
+The earlier 'step G skipped' line belongs to the initial run, before hazard.json existed.
+
+python -u run_all.py mine hazard.json
+  -> evidence/meta.json
+[mine]
+  the scene from the viewer: planner [('ego', 'H0', 18.65)]
+  1488 feasible of 1500 draws (99% accepted) over 3 hazard ranges, your town's traffic
+  baseline: 313 ego collisions = 309 avoidable by a full brake + 2 unavoidable + 2 unattributed (2 at < 1 m/s);  P(planner failure | hazard) = 2.08e-01 [1.88e-01, 2.29e-01]
+            x exposure 1 per trip = 2.08e-01 per trip (upper 2.29e-01)
+  chosen  : 312 ego collisions = 309 avoidable by a full brake + 2 unavoidable + 1 unattributed (2 at < 1 m/s);  P(planner failure | hazard) = 2.08e-01 [1.88e-01, 2.29e-01]
+            x exposure 1 per trip = 2.08e-01 per trip (upper 2.29e-01)
+  -> evidence/mine.json
+  (322 s)
+
+python -u run_all.py export
+  -> evidence/meta.json
+[export]
+  17 runs, 6000 cloud points -> evidence/viewer.json (open the viewer, chapter 9)
+  (0 s)
+
+Exposure=1 is the declared every-trip hazard test protocol, not measured public-road exposure.
+Validation: 31 tests passed, 10 skipped (Node executable absent).
+Additional pure-JS VM check: exact baseline, exact chosen, B-01 and C-03 all match Python with zero state error; see evidence/hazard_js_parity.json.

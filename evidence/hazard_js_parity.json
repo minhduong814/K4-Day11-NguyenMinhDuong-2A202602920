@@ -1,0 +1,67 @@
+{
+  "method": "Pure sim-core.js executed in isolated Node VM; not browser UI automation",
+  "jobs": [
+    "exact baseline",
+    "exact chosen",
+    "B-01 screenshot scene",
+    "C-03 screenshot scene"
+  ],
+  "comparisons": [
+    {
+      "job": 0,
+      "max_position_state_error": 0,
+      "max_planner_state_error": 0,
+      "events_match": true,
+      "events": [
+        [
+          "ego",
+          "H0",
+          373,
+          "contact"
+        ]
+      ]
+    },
+    {
+      "job": 1,
+      "max_position_state_error": 0,
+      "max_planner_state_error": 0,
+      "events_match": true,
+      "events": [
+        [
+          "ego",
+          "H0",
+          373,
+          "contact"
+        ]
+      ]
+    },
+    {
+      "job": 2,
+      "max_position_state_error": 0,
+      "max_planner_state_error": 0,
+      "events_match": true,
+      "events": [
+        [
+          "ego",
+          "C2",
+          254,
+          "contact"
+        ]
+      ]
+    },
+    {
+      "job": 3,
+      "max_position_state_error": 0,
+      "max_planner_state_error": 0,
+      "events_match": true,
+      "events": [
+        [
+          "ego",
+          "P1",
+          381,
+          "block"
+        ]
+      ]
+    }
+  ]
+}
